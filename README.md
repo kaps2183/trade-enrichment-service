@@ -21,6 +21,7 @@ Use cases handled -
 2. Date Validation - basic validation where date format is imposed using jackson, we skip the row and continue
 
 TODO - 
-1. Testing - As I started with service class, so unit tests exist for to cover above mentioned use cases. Given more time I would have liked to develop tests first for other components of the service and some integration tests for controller too. 
+1. Testing - I started with service class, so unit tests exist to cover above mentioned use cases. Given more time I would have liked to develop tests first for other components of the service and some integration tests for controller too. 
 2. product enrichment logic can be extracted in a separate class if we have more fields to enrich going forwards using some pattern (e.g.- strategy pattern).
-3. Date validation logic can more sofesticated given some more time to work with. 
+3. Date validation logic can more sofesticated given some more time to work with.
+4. at the moment datastore is just prototype using map. In practise, would use more sophesticated caching solution to meet the demands.
