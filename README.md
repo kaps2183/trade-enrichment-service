@@ -14,4 +14,4 @@ Content-Type: text/csv
 
 or 
 
-# curl --request POST --data @/<YOUR_PATH_To_PROEJCT>/trade-enrichment-service/src/test/resources/trade.csv --header 'Content-Type: text/csv' --header 'Accept: text/csv' http://localhost:8080/api/v1/enrich
+curl --request POST --data @/<YOUR_PATH_To_PROEJCT>/trade-enrichment-service/src/test/resources/trade.csv --header 'Content-Type: text/csv' --header 'Accept: text/csv' http://localhost:8080/api/v1/enrich
