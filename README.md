@@ -1,8 +1,8 @@
 # trade-enrichment-service
 
 Instructions - 
-1. Download repo in your preferred IDE
-2. This is a spring boot service, please run TradeEnrichmentServiceApplication that should start the service.
+1. Please download repo in your preferred IDE
+2. This is a spring boot service, please run **TradeEnrichmentServiceApplication** to start the service.
 3. To test -> 
 use below in http client  
 
@@ -21,6 +21,6 @@ Use cases handled -
 2. Date Validation - basic validation where date format is imposed using jackson, we skip the row and continue
 
 TODO - 
-1. Started with service class, so unit tests exist for service class to test above mentioned use cases, given more time I would have liked to develop tests for other components of the service. 
-2. Strategy pattern can applied and product enrichment logic can be extracted in a separate class if we have more fields to enrich.
-3. Date validation logic can more sofesticated given some more time on. 
+1. Testing - As I started with service class, so unit tests exist for to cover above mentioned use cases. Given more time I would have liked to develop tests first for other components of the service and some integration tests for controller too. 
+2. product enrichment logic can be extracted in a separate class if we have more fields to enrich going forwards using some pattern (e.g.- strategy pattern).
+3. Date validation logic can more sofesticated given some more time to work with. 
