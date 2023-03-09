@@ -12,19 +12,19 @@ import java.io.IOException;
 import java.io.Reader;
 
 @Component
-public class CsvReader implements FeedReader<Product> {
+public class ProductCsvReader implements FeedReader<Product> {
 
     private final CsvMapper mapper;
 
     @Autowired
-    public CsvReader(CsvMapper mapper) {
+    public ProductCsvReader(CsvMapper mapper) {
         this.mapper = mapper;
     }
 
     @Override
     public MappingIterator<Product> readRecordsFrom(Reader reader, Class<Product> pojoType) throws IOException {
-        CsvSchema schema = mapper.schemaFor(pojoType).withHeader();
-        ObjectReader objectReader = mapper.readerFor(pojoType).with(schema);
+        CsvSchema schema = mapper.schemaFor(pojoType);
+        ObjectReader objectReader = mapper.readerFor(pojoType).with(schema.withHeader());
         return objectReader.readValues(reader);
     }
 }
